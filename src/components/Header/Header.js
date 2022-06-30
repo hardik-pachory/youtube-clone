@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './header.styles.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
@@ -17,6 +17,16 @@ const Header = () => {
     history.push('/')
   }
 
+  const [query, setQuery] = useState("");
+  
+  const searchExec = () => {
+    history.push({
+      pathname: '/view/results',
+      state: query
+    }
+    )
+  }
+
   return (
     <div className='header' style={{height: '11vh'}}>
         <img
@@ -27,8 +37,13 @@ const Header = () => {
             style={{cursor: 'pointer'}}
         
         />              
-        <input type="text" className="seach-bar" placeholder='Search'  style={{ "margin-left":"15%", width:"30%", backgroundColor:'transparent'}}/>
-          <button
+      <input
+        type="text"
+        className="seach-bar"
+        onChange={(event) =>{setQuery(event.target.value)}}
+        placeholder='Search' style={{ "margin-left": "15%", width: "30%", backgroundColor: 'transparent' }} />
+        <button
+          onClick={searchExec}
               style={{ color: "white", backgroundColor:'transparent', marginLeft:'1px' }}
           > 🔎</button>
               

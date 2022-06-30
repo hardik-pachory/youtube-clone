@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux/es/exports';
 import Watch from './components/Watch';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
+import SearchResult from './components/SearchResult';
 
 function App() {
 
@@ -21,6 +22,9 @@ function App() {
         </Route>
         <Route path="/:id" exact>
           <Watch/>
+        </Route>
+        <Route path="/view/results" exact>
+          <SearchResult />
         </Route>
       </Switch>
       

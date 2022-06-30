@@ -4,7 +4,7 @@ import Thread from './Thread'
 
 const Comments = ({ id }) => {
 
-    const key = "AIzaSyCnmxgbwkDYwKodUObsxdUU6wAZxmKAhXU"
+    const key = "AIzaSyCCxklQZFwjHW__l646hMdulU3Hp5e7AEs"
     const url = `https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=${id}&key=${key}`
     const [comments, setComments] = useState([])
 
