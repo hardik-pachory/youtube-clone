@@ -1,11 +1,10 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useLocation, useParams } from 'react-router-dom';
 import Comments from './Comments';
 const Watch = () => {
   const key = process.env.REACT_APP_YT_API_KEY
   const { id } = useParams();
-  const url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2Cstatistics&id=${id}&key=${key}`
+  
 
   // const [vdata, setVdata] = useState([]);
   
