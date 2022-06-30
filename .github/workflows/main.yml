@@ -9,8 +9,6 @@ jobs:
   deploy:
     name: Build & Deployment
     runs-on: ubuntu-latest
-    env:
-      REACT_APP_YT_API_KEY: 'AIzaSyCnmxgbwkDYwKodUObsxdUU6wAZxmKAhXU'
 
     steps:
       - name: get the source code
