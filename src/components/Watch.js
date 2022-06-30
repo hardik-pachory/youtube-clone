@@ -2,7 +2,7 @@ import React from 'react'
 import { useLocation, useParams } from 'react-router-dom';
 import Comments from './Comments';
 const Watch = () => {
-  const key = process.env.REACT_APP_YT_API_KEY
+  
   const { id } = useParams();
   
 
