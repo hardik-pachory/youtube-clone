@@ -3,7 +3,7 @@ import Video from './Video';
 import axios from 'axios';
 const Videos = () => {
 
-  const key = "AIzaSyCnmxgbwkDYwKodUObsxdUU6wAZxmKAhXU";
+  const key = "AIzaSyCCxklQZFwjHW__l646hMdulU3Hp5e7AEs";
 
   const url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=IN&maxResults=60&key=${key}`
   // const loaded = false;
